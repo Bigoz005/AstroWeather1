@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="732dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignStart="@+id/toolbar"
+        android:layout_alignLeft="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Time"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <fragment
+                android:id="@+id/fragment2"
+                android:name="com.example.astroweather.Moon"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment"
+                android:name="com.example.astroweather.Sun"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginStart="-5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
